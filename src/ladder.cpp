@@ -93,7 +93,7 @@ bool is_adjacent(const string& word1, const string& word2) {
 
  void print_word_ladder(const vector<string>& ladder) {
     if (ladder.empty()) {
-        error("", "", "ERROR: Word ladder is empty."); return;}
+        cout << "No word ladder found." << endl;}
     for (size_t i = 0; i < ladder.size(); i++) {
         cout << ladder[i];
         if (i < ladder.size() - 1) {
