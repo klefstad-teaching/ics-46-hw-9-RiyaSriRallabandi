@@ -42,9 +42,6 @@ void print_path(const vector<int>& v, int total) {
     if (v.empty()) {
         cout << "ERROR: Path does not exist." << endl; return;}
     for (size_t i = 0; i < v.size(); i++) {
-        cout << V[i];
-        if (i < v.size() - 1) {
-            cout << " -> ";
-        }
+        cout << v[i] << " ";
     } cout << "Total cost: " << total << endl;
 }
