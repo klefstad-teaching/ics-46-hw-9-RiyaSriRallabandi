@@ -97,10 +97,7 @@ bool is_adjacent(const string& word1, const string& word2) {
         return;}
     cout << "Word ladder found: ";
     for (size_t i = 0; i < ladder.size(); i++) {
-        cout << ladder[i];
-        if (i < ladder.size() - 1) {
-            cout << " ";
-        }
+        cout << ladder[i] << " ";
     } cout << endl;
  }
 
