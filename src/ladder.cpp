@@ -77,3 +77,17 @@ bool is_adjacent(const string& word1, const string& word2) {
     } return {};
  }
 
+ void load_words(set<string> & word_list, const string& file_name) {
+    ifstream input_file(file_name);
+    if (!input_file.is_open()) {
+        error("", "", "Error: Unable to open file " + file_name);
+        return;
+    }
+    string word;
+    while (input_file >> word) {
+        for (char& c : word) {
+            c = tolower(c);
+        } word_list.insert(word);
+    } input_file.close();
+ }
+
