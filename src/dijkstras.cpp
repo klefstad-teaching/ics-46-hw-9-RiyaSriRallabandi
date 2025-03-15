@@ -20,7 +20,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
             int v = e.dst;
             int weight = e.weight;
             if (!visited[v] && distances[u] + weight < distances[v]) {
-                distances[v] = distances[u] + weight
+                distances[v] = distances[u] + weight;
                 previous[v] = u;
                 pq.push({distances[v], v});
             }

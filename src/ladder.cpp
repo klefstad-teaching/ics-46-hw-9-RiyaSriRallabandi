@@ -19,7 +19,7 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
         current_row[0] = i;
         
         for (int j = 1; j <= str2_length; j++) {
-            if (str1_length[i - 1] == str2_length[j - 1]) {
+            if (str1[i - 1] == str2[j - 1]) {
                 current_row[j] = previous_row[j - 1];
             } else {
                 current_row[j] = 1 + min({previous_row[j], current_row[j - 1], previous_row[j - 1]});
